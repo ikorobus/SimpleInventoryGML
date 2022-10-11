@@ -31,12 +31,12 @@ with(obj_Inventory)
 			}
 		}
 	}
+	if(_pos < 5)
+	{
+		item_array[_pos][item_type] = _type;
+		item_array[_pos][item_sprite] = _sprite;
+		item_array[_pos][item_amount] += 1;
+		with(other) instance_destroy();
+	}
 }
 
-if(_pos < 5)
-{
-	item_array[_pos][item_type] = _type;
-	item_array[_pos][item_sprite] = _sprite;
-	item_array[_pos][item_amount] += 1;
-	with(other) instance_destroy();
-}
